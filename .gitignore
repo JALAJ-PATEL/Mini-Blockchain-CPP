@@ -1,0 +1,43 @@
+# ---- Build / CMake ----
+build/
+build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+*.obj
+*.o
+*.a
+*.lib
+*.exp
+*.pdb
+*.dll
+*.exe
+*.ilk
+*.idb
+*.vcxproj*
+*.sln
+
+# ---- vcpkg (keep the bootstrap + scripts if you like, but ignore the heavy stuff) ----
+vcpkg/installed/
+vcpkg/buildtrees/
+vcpkg/downloads/
+vcpkg/packages/
+vcpkg/blds/
+vcpkg/archives/
+vcpkg/
+
+# ---- IDEs ----
+.vscode/
+.vs/
+.idea/
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+
+# ---- Others ----
+*.log
+.DS_Store
+Thumbs.db
