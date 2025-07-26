@@ -1,18 +1,17 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.14)
 project(MiniBlockchain)
 
 set(CMAKE_CXX_STANDARD 17)
 
-if(DEFINED ENV{VCPKG_ROOT})
-    set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
-endif()
+# Use vcpkg toolchain
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
-include_directories(include)
-add_executable(mini-blockchain
-    src/main.cpp
-    src/blockchain.cpp
+find_package(OpenSSL REQUIRED)
+
+add_executable(MiniBlockchain
+    main.cpp
+    Block.cpp
 )
 
-# Link OpenSSL
-find_package(OpenSSL REQUIRED)
-target_link_libraries(mini-blockchain PRIVATE OpenSSL::SSL OpenSSL::Crypto)
+target_include_directories(MiniBlockchain PRIVATE ${OPENSSL_INCLUDE_DIR})
+target_link_libraries(MiniBlockchain PRIVATE OpenSSL::SSL OpenSSL::Crypto)
