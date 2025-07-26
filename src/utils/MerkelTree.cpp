@@ -10,11 +10,13 @@ std::string MerkleTree::computeMerkleRoot(const std::vector<std::string>& txHash
         std::vector<std::string> nextLevel;
 
         for (size_t i = 0; i < currentLevel.size(); i += 2) {
-            std::string left = currentLevel[i];
-            std::string right = (i + 1 < currentLevel.size()) ? currentLevel[i + 1] : left; // duplicate last if odd
+            std::string left = currentLevel[i]; // Take left child's hash
+
+            // If there's no right child, duplicate the left child's hash
+            std::string right = (i + 1 < currentLevel.size()) ? currentLevel[i + 1] : left;
 
             std::string combined = left + right;
-            std::string hashed = Hashing::sha256(combined);
+            std::string hashed = Hashing::sha256(combined); // Hash the concatenated string
             nextLevel.push_back(hashed);
         }
 
