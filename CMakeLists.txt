@@ -22,5 +22,6 @@ add_executable(MiniBlockchain
 target_include_directories(MiniBlockchain PRIVATE 
     ${CMAKE_SOURCE_DIR}/include
     ${OPENSSL_INCLUDE_DIR}
-)# Links the SSL and Crypto libraries from OpenSSL into executable
+)
+# Links the SSL and Crypto libraries from OpenSSL into executable
 target_link_libraries(MiniBlockchain PRIVATE OpenSSL::SSL OpenSSL::Crypto)
