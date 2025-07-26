@@ -1,7 +1,7 @@
 // src/Transaction.cpp
-#include "../../include/Transaction.h"
-#include "../../include/utils/Timestamp.h"
-#include "../../include/utils/Hashing.h"
+#include "Transaction.h"
+#include "utils/Timestamp.h"
+#include "utils/Hashing.h"
 
 Transaction::Transaction(std::string sender, std::string receiver, double amount)
     : sender(std::move(sender)), receiver(std::move(receiver)), amount(amount)

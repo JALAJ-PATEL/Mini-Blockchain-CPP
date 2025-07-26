@@ -1,6 +1,6 @@
 // src/Blockchain.cpp
-#include "../include/Blockchain.h"
-#include "../include/utils/Timestamp.h"
+#include "Blockchain.h"
+#include "utils/Timestamp.h"
 #include <iostream>
 #include <sstream>
 

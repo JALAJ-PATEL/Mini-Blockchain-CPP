@@ -3,11 +3,11 @@
 #define WALLET_H
 
 #include <string>
-#include <openssl/evp.h>
+#include <openssl/evp.h> // Declares OpenSSL’s high-level EVP API
 
 class Wallet {
 private:
-    EVP_PKEY* keyPair;  // OpenSSL key pair
+    EVP_PKEY* keyPair;  // OpenSSL key pair for public and private keys
 
 public:
     Wallet();  // Constructor generates key pair

@@ -1,6 +1,6 @@
 // src/Wallet.cpp
-#include "../../include/Wallet.h"
-#include "../../include/utils/Hashing.h"
+#include "Wallet.h"
+#include "utils/Hashing.h"
 #include <openssl/pem.h>
 #include <openssl/err.h>
 #include <openssl/sha.h>

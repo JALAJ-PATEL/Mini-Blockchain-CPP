@@ -1,8 +1,8 @@
 // src/Block.cpp
-#include "../../include/Block.h"
-#include "../../include/utils/Hashing.h"
-#include "../../include/utils/Timestamp.h"
-#include "../../include/utils/MerkleTree.h"
+#include "Block.h"
+#include "utils/Hashing.h"
+#include "utils/Timestamp.h"
+#include "utils/MerkleTree.h"
 
 #include <sstream>
 #include <iomanip>

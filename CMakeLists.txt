@@ -19,5 +19,8 @@ add_executable(MiniBlockchain
     src/utils/Timestamp.cpp
 )
 
-target_include_directories(MiniBlockchain PRIVATE ${OPENSSL_INCLUDE_DIR})
+target_include_directories(MiniBlockchain PRIVATE 
+    ${CMAKE_SOURCE_DIR}/include
+    ${OPENSSL_INCLUDE_DIR}
+)# Links the SSL and Crypto libraries from OpenSSL into executable
 target_link_libraries(MiniBlockchain PRIVATE OpenSSL::SSL OpenSSL::Crypto)
