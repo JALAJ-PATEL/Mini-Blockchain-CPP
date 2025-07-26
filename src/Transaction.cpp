@@ -7,7 +7,7 @@ Transaction::Transaction(std::string sender, std::string receiver, double amount
     : sender(std::move(sender)), receiver(std::move(receiver)), amount(amount)
 {
     timestamp = Timestamp::getCurrentUTCTime();  // e.g., "2025-07-25T23:59:59Z"
-    signature = "";  // Placeholder for future signing logic
+    signature = "";  // Placeholder : For Complex Cryptographic signing and Validation
 }
 
 std::string Transaction::getSender() const {
@@ -35,12 +35,10 @@ std::string Transaction::toString() const {
 }
 
 void Transaction::signTransaction(const std::string& privateKey) {
-    // TODO: Implement digital signing using OpenSSL
-    // For now, just simulate with hash
     signature = Hashing::sha256(privateKey + toString());
 }
 
-bool Transaction::isValid() const {
-    // Placeholder for real validation
+bool Transaction::isValid() const { 
+    // basic validation logic : sender and receiver should not be empty, amount should be positive
     return !sender.empty() && !receiver.empty() && amount > 0;
 }
