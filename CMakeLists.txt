@@ -9,8 +9,14 @@ set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.c
 find_package(OpenSSL REQUIRED)
 
 add_executable(MiniBlockchain
-    main.cpp
-    Block.cpp
+    src/main.cpp
+    src/Block.cpp
+    src/Blockchain.cpp
+    src/Transaction.cpp
+    src/Wallet.cpp
+    src/utils/Hashing.cpp
+    src/utils/MerkelTree.cpp
+    src/utils/Timestamp.cpp
 )
 
 target_include_directories(MiniBlockchain PRIVATE ${OPENSSL_INCLUDE_DIR})
