@@ -6,7 +6,7 @@
 
 A **production-ready mini blockchain implementation** in modern C++ featuring cryptographic security, proof-of-work mining, and full transaction management. Built with industry-standard practices using OpenSSL for cryptographic operations.
 
-## ✨ Features
+##  Features
 
 ### 🔐 **Cryptographic Security**
 - **RSA 2048-bit** key pair generation for wallets
@@ -30,39 +30,39 @@ A **production-ready mini blockchain implementation** in modern C++ featuring cr
 - **Private key management** for transaction signing
 - **Public key verification** for transaction validation
 
-### 🚀 **Performance & Scalability**
+###  **Performance & Scalability**
 - **Batch transaction processing** for high throughput
 - **Dynamic block size** to handle varying transaction volumes
 - **Efficient memory management** with modern C++ practices
 - **Cross-platform compatibility** (Windows, Linux, macOS)
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 Mini-Blockchain/
 ├── 📁 include/
-│   ├── 🔑 Wallet.h           # RSA wallet with key management
-│   ├── 💸 Transaction.h      # Digital transaction with signatures
-│   ├── 🧱 Block.h            # Blockchain block with proof-of-work
-│   ├── ⛓️ Blockchain.h       # Main blockchain logic
+│   ├──  Wallet.h           # RSA wallet with key management
+│   ├──  Transaction.h      # Digital transaction with signatures
+│   ├──  Block.h            # Blockchain block with proof-of-work
+│   ├──  Blockchain.h       # Main blockchain logic
 │   └── 📁 utils/
-│       ├── 🔒 Hashing.h      # SHA-256 cryptographic hashing
-│       ├── 🌳 MerkleTree.h   # Merkle tree for data integrity
-│       └── ⏰ Timestamp.h    # UTC timestamp utilities
+│       ├──  Hashing.h      # SHA-256 cryptographic hashing
+│       ├──  MerkleTree.h   # Merkle tree for data integrity
+│       └──  Timestamp.h    # UTC timestamp utilities
 ├── 📁 src/
-│   ├── 🎯 main.cpp           # Demo application
+│   ├── main.cpp           # Demo application
 │   └── [implementation files]
 └── 📁 vcpkg/                 # Package manager for OpenSSL
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Windows 10/11** with Visual Studio 2019+ OR **Linux/macOS** with GCC 8+
 - **CMake 3.14+**
 - **Git**
 
-### 🔧 Installation
+### Installation
 
 1. **Clone the repository:**
 ```bash
@@ -88,7 +88,7 @@ cmake --build . --config Release
 .\Release\MiniBlockchain.exe
 ```
 
-## 🎮 Usage Example
+## Usage Example
 
 ```cpp
 #include "Blockchain.h"
@@ -118,23 +118,23 @@ int main() {
 }
 ```
 
-## 📊 Sample Output
+## Sample Output
 
 ```
-🔗 Mini-Blockchain Started - Expanded Capacity Demo
+Mini-Blockchain Started - Expanded Capacity Demo
 ================================================
 
-📱 Created 6 wallets with unique addresses:
+Created 6 wallets with unique addresses:
 Miner:   2fbbb8b43135d948...
 User1:   969439bd48da5b1c...
 User2:     59f73675ce8fcc19...
 
-💸 Creating Block 1 with multiple transactions...
+Creating Block 1 with multiple transactions...
 Added 3 transactions to pending pool
 Block successfully mined: 00195797db6dcdb28aa0fcb4a09da381de6e340c7c7e458865c61226cd671f22
 ✅ Block 1 mined successfully!
 
-🔗 === COMPLETE BLOCKCHAIN STATE ===
+=== COMPLETE BLOCKCHAIN STATE ===
 
 === Block 0 ===
 Hash: e250655171d6ebbac8d1ff006e61e06666dfb09163befc6b5d45252c669fcfb4
@@ -148,21 +148,21 @@ Previous Hash: e250655171d6ebbac8d1ff006e61e06666dfb09163befc6b5d45252c669fcfb4
 Timestamp: 1753525753
 Transactions: 4
 
-💰 === FINAL BALANCES ===
+=== FINAL BALANCES ===
 Miner:   300 coins
 User1:   -48.3 coins
 User2:     13.5 coins
 
-📊 === BLOCKCHAIN STATISTICS ===
+=== BLOCKCHAIN STATISTICS ===
 Total Blocks: 4
 Total Transactions: 21
 Mining Difficulty: 2
 Chain Valid: ✅ YES
 
-🎉 Mini-Blockchain Demo Completed Successfully!
+Mini-Blockchain Demo Completed Successfully!
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Mining Difficulty
 ```cpp
@@ -184,7 +184,7 @@ bool Transaction::isValid() const {
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 The project includes comprehensive testing scenarios:
 
@@ -195,7 +195,7 @@ The project includes comprehensive testing scenarios:
 - **Chain validation** and integrity checks
 - **Balance calculation** across complex transaction histories
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Cryptographic Specifications
 - **Key Size**: RSA 2048-bit for optimal security/performance balance
@@ -215,7 +215,7 @@ The project includes comprehensive testing scenarios:
 - **Integrity**: Merkle trees ensure transaction data consistency
 - **Authentication**: RSA signatures verify transaction authenticity
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 - [ ] **Smart Contracts** with embedded scripting
 - [ ] **Networking Layer** for distributed nodes
@@ -235,3 +235,4 @@ The project includes comprehensive testing scenarios:
 ---
 
 **⭐ Star this repository if you found it helpful!**
+
