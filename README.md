@@ -37,7 +37,7 @@ A **production-ready mini blockchain implementation** in modern C++ featuring cr
 - **Cross-platform compatibility** (Windows, Linux, macOS)
 
 ##  Architecture
-
+![Blockchain Architecture](Blockchain-Architecture.png)
 ```
 Mini-Blockchain/
 ├── 📁 include/
